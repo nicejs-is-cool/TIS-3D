@@ -103,7 +103,7 @@ public final class Settings {
             maxCasingsPerController, 1, 512, COMMENT_MAX_CASINGS_PER_CONTROLLER);
 
         maxLinesPerProgram = config.getInt(NAME_MAX_LINES_PER_PROGRAM, CATEGORY_MODULE_EXECUTION,
-            maxLinesPerProgram, 1, 200, COMMENT_MAX_LINES_PER_PROGRAM);
+            maxLinesPerProgram, 0, 200, COMMENT_MAX_LINES_PER_PROGRAM);
         maxColumnsPerLine = config.getInt(NAME_MAX_COLUMNS_PER_LINE, CATEGORY_MODULE_EXECUTION,
             maxColumnsPerLine, 1, 80, COMMENT_MAX_COLUMNS_PER_LINE);
         maxInfraredQueueLength = config.getInt(NAME_MAX_QUEUE_LENGTH, CATEGORY_MODULE_INFRARED,

@@ -89,13 +89,13 @@ task apiJar(type: Jar) {
     include 'li/cil/tis3d/api/**'
 }
 
-task javadocJar(type: Jar, dependsOn: javadoc) {
+/*task javadocJar(type: Jar, dependsOn: javadoc) {
     from javadoc.destinationDir
     classifier 'javadoc'
-}
+}*/
 
 artifacts {
-    archives javadocJar
+    //archives javadocJar
     archives apiJar
 }
 
@@ -103,7 +103,7 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             artifact jar
-            artifact javadocJar
+            //artifact javadocJar
             artifact apiJar
         }
     }
