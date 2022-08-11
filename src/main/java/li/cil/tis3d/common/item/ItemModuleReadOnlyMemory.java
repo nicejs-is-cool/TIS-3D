@@ -72,13 +72,6 @@ public final class ItemModuleReadOnlyMemory extends ItemModule {
         if (nbt == null) {
             stack.setTagCompound(nbt = new NBTTagCompound());
         }
-
-        byte[] nbtData = nbt.getByteArray(TAG_DATA);
-        if (nbtData.length != data.length) {
-            nbtData = new byte[data.length];
-        }
-
-        System.arraycopy(data, 0, nbtData, 0, data.length);
-        nbt.setByteArray(TAG_DATA, nbtData);
+        nbt.setByteArray(TAG_DATA, data);
     }
 }
